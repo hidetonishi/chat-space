@@ -1,0 +1,96 @@
+!!!
+%html
+  %body
+    .wrapper
+      .chat-side
+        .side-header
+          .side-header__box
+            %p.side-header__box__user-name name
+            %ul.side-header__box__menu
+              %li.side-header__box__menu__new-group
+                %a{:href => ""}
+                  %i.fa.fa-edit
+              %li.side-header__box__menu__edit-user
+                %a{:href => ""}
+                  %i.fa.fa-cog
+        .groups
+          .group
+            %p.group__group-name grouname
+            %p.group__latest-message メッセージはまだありません
+
+      .chat-main
+        .main-header
+          .main-header__left-box
+            %h2.main-header__left-box__current-group llll
+            %ul.main-header__left-box__member-list
+              Member:
+              %li.main-header__left-box__member-list__member tech
+          %a{:href => ""}
+            .main-header__edit-btn Edit
+        .messages
+          .message
+            .message__upper-info
+              %p.message__upper-info__talker uuuu
+              %p.message__upper-info__date
+            %p.message__text jwgf;uuuuuu;
+        .form
+          %form#new_message.new_message{"accept-charset" => "UTF-8", :action => "/groups/1848/messages", :enctype => "multipart/form-data", :method => "post"}
+            %input{:name => "utf8", :type => "hidden", :value => "✓"}/
+            %inout{:name => "authenticity_token", :type => "hiden", :value => "✓"}
+            .input-box
+              %input#message_content.input-box__text{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
+              %label.input-box__image{:for => "message_image"}
+                %i.fa.fa-image
+                %input#message_image.input-box__image__file{:name => "message[image]", :type => "file"}/
+              %input.submit-btn{"date-disable-with" => "send", :name => "commit", :type => "submit", :value => "send"}/
+
+
+  -# <html>
+  -#   <body>
+  -#     <div class="wrapper">
+  -#       <div class="chat-side">
+  -#         <div class="side-header">
+  -#           <div class="side-header-box">
+  -#             <p class="side-header_box-user_name">name</p>
+  -#             <ul class="side-header_box_menu">
+  -#               <li class="side-header__box__menu__new-group">
+  -#                 <a href="/groups/new"><i class="fa fa-edit"></i></a>
+  -#               </li>
+  -#               <li class="side-header__box__menu__edit-user">
+  -#                 <a href="/users/918/edit"><i class="fa fa-cog"></i></a>
+  -#               </li>
+  -#             </ul>
+  -#           </div>
+  -#         </div>
+  -#         <div class="groups">
+  -#           <a href=""></a>
+  -#       </div>
+  -#       <div class="chat-main">
+  -#         <div class="main-header">
+  -#           <div class="main-header__left-box">
+  -#             <h2 class="main-header_leftbox__current-group">レフトタイトル</h2>
+  -#             <ul class="main-header__left-box__member-list">Member:
+  -#               <li class="main-header__left-box__member-list__member">tech</li>
+  -#             </ul>
+  -#           </div>
+  -#           <a href="">
+  -#             <div class="main-header__edit-btn">Edit</div>
+  -#           </a>
+  -#         </div>
+  -#         <div class="messages">
+          
+  -#         </div>
+  -#         <div class ="form">
+  -#           <form class="new_message" id="new_message">
+  -#             <div class="input-box">
+  -#               <input placeholder="type a message" class="input-box__text" type="text" name="message[content]" id="message_content">
+  -#               <label class="input-box__image" for="message_image"><i class="fa fa-image"></i>
+  -#               <input class="input-box__image__file" type="file" name="message[image]" id="message_image">
+  -#               </label>
+  -#             </div>
+  -#             <input type="submit" name="commit" value="send" class="submit-btn" date-disable-with="send">
+  -#           </form>
+  -#       </div>
+  -#     </div>
+  -#   </body>
+  -# </html>
