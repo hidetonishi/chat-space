@@ -23,9 +23,13 @@
         display: flex;
         &__edit{
           color: white;
+          font-size: 1.3rem;
+          margin-right: 5px;
         }
         &__cog {
           color: white;
+          font-size: 1.3rem;
+
         }
       }
       }
@@ -38,13 +42,15 @@
       overflow: scroll;
       .group {
         margin-bottom: 40px;
-        &__group-name {
+        .group-name {
           font-size: 15px;
           margin-bottom: 5px;
+          color: white;
         }
-        &__latest-message {
+        .latest-message {
           font-size: 11px;
+          color: white;
         }
       }
     }
-  }
+}
