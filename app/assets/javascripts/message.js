@@ -3,21 +3,22 @@ $(function(){
 
     var image = (message.image !== null) ? `<img class= "message__text__image" src="${message.image}">` : ''
 
-    var html = `<div class="message">
-    <div class="message__upper-info">
-    <p class="message__upper-info__talker">
-    ${message.user_name}
-    </p>
-    <p class="message__upper-info__date">
-    ${message.date}
-    </p>
-    </div>
-    <p class="message__text">
-    ${message.content}
-    <img class="message__text__image" src= >
-    ${image}
-    </p>
-    </div>`
+    var html = 
+        `<div class="message">
+        <div class="message__upper-info">
+        <p class="message__upper-info__talker">
+              ${message.user_name}
+        </p>
+        <p class="message__upper-info__date">
+              ${message.date}
+        </p>
+        </div>
+        <p class="message__text">
+              ${message.content}
+        <img class="message__text__image" src= >
+              ${image}
+        </p>
+        </div>`
     return html;
   }
 
