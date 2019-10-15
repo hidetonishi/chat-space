@@ -9,7 +9,6 @@ listen "#{app_path}/tmp/sockets/unicorn.sock"
 stderr_path "#{app_path}/log/unicorn.stderr.log"
 stdout_path "#{app_path}/log/unicorn.stdout.log"
 
- ↓↓↓↓↓↓↓ 以下のように変更 ↓↓↓↓↓↓
 
 # ../が一つ増えている
 app_path = File.expand_path('../../../', __FILE__)
