@@ -69,6 +69,6 @@ $(function(){
         });
       }
     };
-    setInterval(reloadMessages, 2000);
+    setInterval(reloadMessages, 5000);
   
 });

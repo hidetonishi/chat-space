@@ -34,7 +34,7 @@
     color: #38aef0;
   }
   .messages {
-    height: calc(100vh - 190px);
+    height: calc(100vh - 170px);
     box-sizing: border-box;
     padding: 46px 40px;
     background-color: #fafafa;
@@ -60,7 +60,7 @@
     .form {
       height: 90px;
       padding: 20px 40px;
-      margin-top: 20px;
+      // margin-top: 20px;
       box-sizing: border-box;
       background-color: #dddddd;
       .new_message {

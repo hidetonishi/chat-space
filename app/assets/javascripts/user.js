@@ -27,11 +27,11 @@ $(function() {
     $(".user-search-result").empty();
     var input = $("#user-search-field").val();
     var users_id = [];
-    appendUser(users_id);
+    // appendUser(users_id);
       $.ajax({
           type: 'GET',
           url: '/users',
-          data: { keyword: input, group_users_id: users_id },
+          data: { keyword: input,},
           dataType: 'json'
         })
         .done(function(users){
