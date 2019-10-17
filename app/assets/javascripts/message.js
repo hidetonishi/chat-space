@@ -1,4 +1,4 @@
-$(function(){
+$(document).on('turbolinks:load', function(){
   function buildHTML(message) {
 
     var image = (message.image !== null) ? `<img class= "message__text__image" src="${message.image}">` : ''
@@ -61,8 +61,8 @@ $(function(){
           messages.forEach(function (message) {
             insertHTML = buildHTML(message);
             $('.messages').append(insertHTML);
+            $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, '500');
           })
-          $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
         })
         .fail(function(){
           alert('自動更新に失敗しています');
@@ -70,5 +70,4 @@ $(function(){
       }
     };
     setInterval(reloadMessages, 5000);
-  
 });
