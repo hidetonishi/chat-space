@@ -5,20 +5,21 @@
     var image = (message.image !== null) ? `<img class= "message__text__image" src="${message.image}">` : ''
 
     var html = 
-        `<div class="message" data-message-id="${message.id}">
+        `    <div class="message" data-message-id="${message.id}">
         <div class="message__upper-info">
         <p class="message__upper-info__talker">
-              ${message.user_name}
+        ${message.user_name}
         </p>
         <p class="message__upper-info__date">
-              ${message.created_at}
+        ${message.created_at}
         </p>
         </div>
         <p class="message__text">
-              ${message.content}
-        <img class="message__text__image" src= >
-              ${image}
+        </p><p class="message__text__content">
+        ${message.content}
         </p>
+        <img class="message__text__image" src= >
+        <p>${image}</p>
         </div>`
     return html;
   }
