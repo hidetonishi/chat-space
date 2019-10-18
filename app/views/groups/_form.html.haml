@@ -26,12 +26,15 @@
       .chat-group-users
       - @group.users.each do |user|
         .chat-group-user.clearfix
-          %input{name: "group[user_ids][]", type: "hidden", value: user.id}/
-          %p.chat-group-user__name
-            = user.name
-          .user-search-remove.chat-group-user__btn.chat-group-user__btn--remove.js-remove-btn
-          
+          %input{name: 'group[user_ids][]', type: 'hidden', value: "#{ user.id }"}
+            %p.chat-group-user__name
+              = user.name
+            %p.user-search-remove.chat-group-user__btn.chat-group-user__btn--remove.js-remove-btn
+              - unless current_user.id == user.id
+                削除
+                
   .chat-group-form__field.clearfix
     .chat-group-form__field--left
     .chat-group-form__field--right
       = f.submit class: 'chat-group-form__action-btn'
+      -# <a href="https://gyazo.com/27ca436e7acef7a88011b03dc22a29ae"><img src="https://i.gyazo.com/27ca436e7acef7a88011b03dc22a29ae.png" alt="Image from Gyazo" width="116"/></a>
